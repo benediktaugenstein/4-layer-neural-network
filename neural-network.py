@@ -6,7 +6,7 @@ import pandas as pd
 #np.random.seed(0)
 
 # Choose dataset from Excel
-file = pd.ExcelFile('Test2.xlsx')
+file = pd.ExcelFile('data_python.xlsx')
 dataset = file.parse('data')
 array1 = dataset.values
 array1 = np.array(array1)
