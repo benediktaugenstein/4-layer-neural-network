@@ -6,7 +6,7 @@ import pandas as pd
 #np.random.seed(0)
 
 # Choose dataset from Excel
-file = pd.ExcelFile('data_python.xlsx')
+file = pd.ExcelFile('data_credit.xlsx')
 dataset = file.parse('data')
 array1 = dataset.values
 array1 = np.array(array1)
@@ -101,29 +101,10 @@ for i in range(learning_cycles):
     layer4.forward(layer3.output)
 
 # Set input to make predictions for (Test data from Excel)
-new_input_data = np.array([[2.5, 3.5, 3.5],
-                           [5.5, 2.5, 5.5],
-                           [-3.5, -1, 2.5],
-                           [5.5, -2.5, 5.5],
-                           [-3.5, 3.5, 5.5],
-                           [-5.5, 2.5, 3.5],
-                           [-1, 3.5, 2.5],
-                           [1, 1, 1],
-                           [5.5, -2.5, 3.5],
-                           [-1, 1, -3.5],
-                           [-2, -2.5, 2.5],
-                           [-3.5, 1, 1],
-                           [1, -1, -5.5],
-                           [1, -3.5, -1],
-                           [-3.5, 2.5, 5.5],
-                           [5.5, -1, -5.5],
-                           [1, 2.5, -2.5],
-                           [-5.5, -2.5, 1],
-                           [5.5, -2.5, -5.5],
-                           [3.5, -2.5, -5.5],
-                           [-1, 1, 3.5],
-                           [5.5, -1, -5.5],
-                           [3.5, -3.5, -5.5]])
+new_input_data = np.array([[5.5, 5.5, 5.5],
+                           [-5.5, -5.5, -5.5],
+                           [-2.5, -1, -3.5],
+                           [3.5, -2.5, 5.5]])
 
 # forward input (output is going to be calculated with updated "learned" weights and biases)
 layer1.forward(new_input_data)
